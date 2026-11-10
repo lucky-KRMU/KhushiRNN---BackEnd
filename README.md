@@ -178,7 +178,7 @@ python test_api.py
 
 ```javascript
 async function analyzeSentiment(reviewText) {
-  const BACKEND_URL = "https://your-render-app-name.onrender.com"; // or http://localhost:8000
+  const BACKEND_URL = "https://khushirnn-backend.onrender.com"; // or http://localhost:8000
 
   const response = await fetch(`${BACKEND_URL}/predict`, {
     method: "POST",
@@ -200,24 +200,7 @@ async function analyzeSentiment(reviewText) {
 
 ---
 
-## ☁️ Deploying to Render
+## 👤 Author
 
-### Option A: Automatic Blueprint Deployment (Recommended)
-1. Push this repository to GitHub.
-2. In Render Dashboard, click **New +** $\rightarrow$ **Blueprint**.
-3. Select your repository. Render will automatically read `render.yaml` and configure the Web Service with zero manual setup.
-
-### Option B: Manual Web Service Deployment
-1. Go to [Render Dashboard](https://dashboard.render.com).
-2. Click **New +** $\rightarrow$ **Web Service**.
-3. Connect your GitHub repository.
-4. If your repo contains both frontend and backend, set **Root Directory** to `Backend` (or leave empty if deploying the `Backend` repository directly).
-5. Configure the following settings:
-   - **Environment**: `Python 3`
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Health Check Path**: `/health`
-6. Click **Create Web Service**.
-
-Render will provision the service, install dependencies, pre-warm the model in memory, and bind to `$PORT`.
+- **Lucky Pawar** ([@lucky-KRMU](https://github.com/lucky-KRMU))
 
